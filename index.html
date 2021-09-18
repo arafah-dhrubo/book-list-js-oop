@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container w-11/12 mx-auto">
+        <h1 class="uppercase font-bold text-center text-5xl mb-2">Add Book</h1>
+        <div class="border bg-indigo-200 p-2">
+            <form id="book-form" method="GET">
+            <div class="flex flex-col">
+                <label for="title">Title</label>
+                <input type="text" name="title" class="rounded bg-indigo-100 px-2 py-1 outline-none"
+                id="title" placeholder="Add Title">
+            </div>
+            <div class="flex flex-col">
+                <label for="author">Author</label>
+                <input type="text" name="author" class="rounded bg-indigo-100 px-2 py-1 outline-none" id="author" placeholder="Add author">
+            </div>
+            <div class="flex flex-col">
+                <label for="isbn">ISBN#</label>
+                <input type="text" name="isbn" class="rounded bg-indigo-100 px-2 py-1 outline-none" id="isbn" placeholder="ISBN No.">
+            </div>
+            <div>
+                <input type="submit" value="Submit" class="button w-full rounded py-1 mt-2 bg-indigo-500 text-white uppercase">
+            </div>
+        </form>
+        </div>
+        <table class="w-full bg-indigo-200 mt-5">
+            <thead class="">
+                <tr class="text-center">
+                    <th class="w-3/12 border">Title</th>
+                    <th class="w-2/5 border">Author</th>
+                    <th class="w-3/12 border">ISBN</th>
+                    <th class="w-auto border">Action</th>
+                </tr>
+            </thead>
+            <tbody id="book-list" class="text-center">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
